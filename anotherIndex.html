@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      /* include montserrat font */
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .my-navbar {
+        background-color: #fff;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+      }
+
+      .nav-links-container {
+        display: flex;
+        align-items: center;
+        /* background-color: black; */
+        height: 100%;
+        width: 30%;
+      }
+
+      .nav-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        /* background-color: antiquewhite; */
+        width: 100%;
+      }
+
+      .hero-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10%;
+        background: linear-gradient(45deg, #ee7752, #ff6e20, #fd470a, #d09500);
+        background-size: 400% 400%;
+        animation: gradient 5s ease infinite;
+        height: 100vh;
+      }
+
+      .hero-title {
+        font-size: 3rem;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 20px;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .hero-description {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #dcdcdc;
+        margin-bottom: 20px;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .hero-container img {
+        width: 100%;
+        /* animate when enters screen */
+        animation: fadeIn 2s ease;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .button-primary {
+        background-color: #000;
+        color: #fff;
+        padding: 10px 30px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .button-primary:hover {
+        background-color: #fff;
+        color: #000;
+        /* smooth hover animation */
+        transition: all 0.3s ease;
+      }
+    </style>
+    <header
+      id="header"
+      class="site-header header-scrolled position-fixed text-black bg-light"
+    >
+      <nav id="header-nav" class="my-navbar">
+        <a href="index.html">
+          <img src="images/main-logo.png" />
+        </a>
+        <div class="nav-links-container">
+          <ul id="navbar" class="nav-links">
+            <li class="nav-item">
+              <a class="active" href="#billboard">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="" href="#company-services">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="" href="#mobile-products">Products</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section
+      id="billboard"
+      class="position-relative overflow-hidden bg-light-blue"
+    >
+      <!-- hero section with background image and text and description in foreground with buy now button -->
+      <div class="hero-container">
+        <div>
+          <h3 class="hero-title">Brother TN-242 Toner</h3>
+          <p class="hero-description">
+            This will be the description of the product
+          </p>
+          <a href="#" class="button-primary">Buy Now</a>
+        </div>
+        <div>
+          <img src="images/beispiel.png" alt="hero image" />
+        </div>
+      </div>
+
+      <!-- <div class="swiper-icon swiper-arrow swiper-arrow-prev">
+        <svg class="chevron-left">
+          <use xlink:href="#chevron-left" />
+        </svg>
+      </div>
+      <div class="swiper-icon swiper-arrow swiper-arrow-next">
+        <svg class="chevron-right">
+          <use xlink:href="#chevron-right" />
+        </svg>
+      </div> -->
+    </section>
+  </body>
+</html>
