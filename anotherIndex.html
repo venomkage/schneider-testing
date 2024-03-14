@@ -210,11 +210,19 @@
         padding: 0;
         box-sizing: border-box;
         font-family: "Montserrat", sans-serif;
+        scroll-behavior: smooth;
       }
       body {
         overflow-x: hidden;
         color: #4d4d4d;
       }
+
+      a {
+        text-decoration: none;
+        /* remove visited and unvisited color */
+        color: inherit;
+      }
+
       .my-navbar {
         background-color: #fff;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
@@ -271,7 +279,8 @@
         background-size: 400% 400%;
         animation: gradient 2.7s ease infinite;
         animation-timing-function: ease-in-out;
-        height: 100vh;
+        /* height of the screen */
+        height: 750px;
         /* z-index: 10; */
       }
 
@@ -340,10 +349,12 @@
       /* style company-services section in a way that it contains 4 divs */
       #company-services {
         margin: 3.5rem;
+        height: fit-content;
       }
 
       #more-products {
         padding: 3.5rem;
+        height: fit-content;
         /* background-color: #eca900; */
       }
 
@@ -360,8 +371,6 @@
         margin: 0 auto;
         display: grid;
         gap: 3rem 1rem;
-        /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
-        /* auto-fit width in template columns */
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       }
 
@@ -488,6 +497,95 @@
         height: 1px;
         background-color: #dcdcdc;
       }
+
+      #co2-container {
+        /* height: 90vh; */
+        margin-top: 2rem;
+        overflow: hidden;
+        background: url("https://www.schneiderprintware.de/thumbnail/1b/9f/e6/1708858811/view-green-forest-trees-with-co2_1920x1920.jpg")
+          no-repeat center center/cover;
+      }
+
+      #co2-background {
+        padding: 3rem;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        text-wrap: wrap;
+        color: #cdcdcd;
+      }
+
+      #co2-background h3 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        color: #f4f4f4;
+      }
+
+      #co2-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* here goes the footer styling */
+      footer {
+        position: relative;
+        bottom: 0;
+        /* width: 100%; */
+        background-color: #fff;
+        padding: 3.5rem;
+        /* text-align: center; */
+      }
+
+      .footer-indi {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* align-items: start; */
+
+        border-right: #dcdcdc 1px solid;
+
+        /* background-color: aqua; */
+      }
+
+      .footer-indi h4 {
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .last-section {
+        /* position: absolute; */
+        /* bottom: 0;
+        left: 0;
+        right: 0; */
+        display: grid;
+        gap: 3rem 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        width: 100%;
+        padding: 3rem;
+        background-color: #dcdcdc;
+        text-align: center;
+        /* background-color: antiquewhite; */
+      }
+
+      .last-section > div {
+        /* background-color: aqua; */
+        border-right: #626262 1px solid;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .last-section > div h5 {
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .last-section img {
+        /* make image gray */
+        filter: grayscale(100%);
+      }
     </style>
     <header
       id="header"
@@ -503,10 +601,10 @@
               <a class="nav-link" class="active" href="#billboard">Home</a>
             </li>
             <li>
-              <a class="nav-link" class="" href="#company-services">About</a>
+              <a class="nav-link" class="" href="#company-services">Products</a>
             </li>
             <li>
-              <a class="nav-link" class="" href="#mobile-products">Products</a>
+              <a class="nav-link" class="" href="#co2-container">About</a>
             </li>
           </ul>
         </div>
@@ -589,7 +687,7 @@
                 alt="Mountains"
               />
               <figcaption>
-                <a href=""> Buy Now </a>
+                <a href="#"> Buy Now </a>
               </figcaption>
               <!-- something about the image -->
             </figure>
@@ -683,5 +781,125 @@
         </div>
       </div>
     </section>
+
+    <!-- co2 section -->
+    <section id="co2-container">
+      <!-- image inside a div -->
+      <div id="co2-background">
+        <h3>Schneiderprintware</h3>
+        <p style="font-size: 1rem">
+          Bei Schneiderprintware sind wir stolz darauf, unseren Kunden
+          hochwertige Tonerkartuschen und Tintenpatronen anzubieten, die ihre
+          Druckanforderungen perfekt erfüllen. Als führender Anbieter in der
+          Druckerzubehörbranche verstehen wir die Bedeutung von zuverlässigen
+          Produkten, die hervorragende Druckergebnisse liefern und gleichzeitig
+          kosteneffizient sind. Unser Sortiment umfasst eine breite Auswahl an
+          Tonerkartuschen und Tintenpatronen für eine Vielzahl von Druckermarken
+          und -modellen. Egal, ob Sie einen Laserdrucker für den Bürogebrauch
+          oder einen Tintenstrahldrucker für hochwertige Fotoausdrucke benötigen,
+          bei uns finden Sie die passenden Verbrauchsmaterialien.
+        </p>
+
+        <!-- <img
+          src="https://www.schneiderprintware.de/thumbnail/1b/9f/e6/1708858811/view-green-forest-trees-with-co2_1920x1920.jpg"
+          alt="background"
+        /> -->
+      </div>
+    </section>
+
+    <!-- footer goes here -->
+    <footer>
+      <div class="services-container">
+        <!-- 4 in a row but responsive -->
+        <div class="services-container-row">
+          <div class="card footer-indi">
+            <img src="/images/main-logo.png" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet consectetur
+              adipisicing elit. Beatae, inventore!
+            </p>
+          </div>
+
+          <div class="card footer-indi">
+            <h4>Contact</h4>
+            <ul>
+              <li>Address: 1234 Street Name, City Name, United States</li>
+              <li>Phone: +1234567890</li>
+              <li>Email:</li>
+            </ul>
+          </div>
+          <div class="card footer-indi">
+            <h4>Ladengeschäft</h4>
+            <ul>
+              <li>Address: 1234 Street Name, City Name, United States</li>
+              <li>Phone: +1234567890</li>
+              <li>Email:</li>
+            </ul>
+          </div>
+          <div class="card footer-indi" style="border: none">
+            <h4>Links</h4>
+            <ul>
+              <li>Address: 1234 Street Name, City Name, United States</li>
+              <li>Phone: +1234567890</li>
+              <li>Email:</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="last-section">
+      <div>
+        <h5>We deliver by</h5>
+        <div>
+          <img
+            src="https://www.schneiderprintware.de/media/b1/1a/10/1708720116/dhl.png"
+            alt=""
+            width="50"
+          />
+        </div>
+      </div>
+      <div>
+        <h5>Unsere communities</h5>
+        <div
+          style="
+            display: flex;
+            width: 75%;
+            align-items: end;
+            justify-content: space-between;
+            /* background-color: #626262; */
+          "
+        >
+          <!-- facebook svg -->
+
+          <svg style="height: 30px; width: 30px">
+            <use xlink:href="#facebook"></use>
+          </svg>
+          <svg style="height: 30px; width: 30px">
+            <use xlink:href="#instagram"></use>
+          </svg>
+          <svg style="height: 30px; width: 30px">
+            <use xlink:href="#linkedin"></use>
+          </svg>
+          <svg style="height: 30px; width: 30px">
+            <use xlink:href="#youtube"></use>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 30 30"
+            width="30px"
+            height="30px"
+            id="x"
+          >
+            <path
+              d="M26.37,26l-8.795-12.822l0.015,0.012L25.52,4h-2.65l-6.46,7.48L11.28,4H4.33l8.211,11.971L12.54,15.97L3.88,26h2.65 l7.182-8.322L19.42,26H26.37z M10.23,6l12.34,18h-2.1L8.12,6H10.23z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div style="border-right: none">
+        <h5>Copyright</h5>
+        <div>© 2024 Schneiderprintware - Alle Rechte vorbehalten</div>
+      </div>
+    </div>
   </body>
 </html>
