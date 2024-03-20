@@ -141,6 +141,15 @@ height: 700px;
 
 .hero-text {
 padding: 5%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.hero-text ul li {
+color: #dadada;
+list-style: none;
 }
 
 .hero-title {
@@ -200,6 +209,7 @@ text-decoration: none;
 font-weight: 500;
 font-size: 1rem;
 transition: all 0.3s ease;
+cursor: default;
 }
 
 .button-primary:hover {
@@ -346,6 +356,12 @@ background: url("https://www.schneiderprintware.de/thumbnail/1b/9f/e6/1708858811
 no-repeat center center/cover;
 background-attachment: fixed;
 }
+#upper-container {
+overflow: hidden;
+background: url("https://www.schneiderprintware.de/media/f4/07/c4/1709460201/SCHNEIDER-PRINTWARE_web_slider_1-4.png")
+no-repeat center center/cover;
+background-attachment: fixed;
+}
 
 #co2-background {
 padding: 3rem;
@@ -353,6 +369,13 @@ height:50%;
 background-color: rgba(0, 0, 0, 0.6);
 text-wrap: wrap;
 color: #cdcdcd;
+}
+#upper-background {
+padding: 3rem;
+height:50%;
+background-color: rgba(0, 0, 0, 0.3);
+text-wrap: wrap;
+color: #dadada;
 }
 
 #co2-background h3 {
@@ -372,10 +395,8 @@ object-fit: cover;
 footer {
 position: relative;
 bottom: 0;
-/* width: 100%; */
 background-color: #fff;
 padding: 3.5rem;
-/* text-align: center; */
 }
 
 .footer-indi {
@@ -430,20 +451,52 @@ background-color: #fff;
 <!-- hero section with background image and text and description in foreground with buy now button -->
 <div class="hero-container">
 <div class="hero-text move-up">
-<h3 class="hero-title">Brother TN-242 Toner</h3>
+<h3 class="hero-title">$free_Art$ $free_Version$ $free_OEM$</h3>
 <p class="hero-description">
-This will be the description of the product
 </p>
-<a href="#" class="button-primary">Buy Now</a>
+<ul>
+<li>- OEM Bezeichnung: $free_OEM$</li>
+<li>- Drucker Marke: $free_Marke$</li>
+<li>- Art: $free_Art$</li>
+<li>- Version: $free_Version$</li>
+</ul>
+<p style="margin: 15px 0px; color: #dadada;">
+$free_kompatibel$ 
+</p>
+<a href="#" class="button-primary" style="margin-top: 10px;">$stock_sellprice$ €</a>
 </div>
 <div class="hero-image move-up">
 <img
-src="https://raw.githubusercontent.com/venomkage/schneider-testing/main/images/beispiel.png"
+src="$stock_image1$"
 alt="hero image"
 />
 </div>
 </div>
 </div>
+
+<div id="upper-container">
+<!-- image inside a div -->
+<div id="upper-background">
+<!-- <h3>Schneiderprintware</h3> -->
+<p style="font-size: 1rem">
+Alle Angaben der Seitenzahlen bei 5% Deckung
+Reichweite (nach ISO/IEC 19798) DIN A4 
+<br><br>
+Diese Tonerkartusche gewährleistet absolute Zuverlässigkeit und gleichbleibend hohe Druckqualität über die gesamte Gebrauchsdauer.Das Schriftbild der Kartusche zeichnet sich durch optimalen Schwärzungsgrad sowie exzellente Tonerhaftung aus. 
+Passend zu folgenden Druckern:
+$free_Marke$ $free_kompatibel$ 
+<br><br>
+{literal} {/literal} 
+Sofort in hoher Qualität drucken Es sind keine weiteren Arbeiten wie Chipwechsel oder Reset notwendig. Einfach einsetzen und drucken. Durch unsere Tonerkartuschen und Druckerpatronen wird Ihre Gerätegarantie nicht beeinträchtigt. Wir garantieren Ihnen hohe Qualität durch unsere industriell wiederaufbereiteten Toner. 4000qm Produktionsfläche mit Sitz in Berlin seit 1999. WEITERE VARIANTEN UND TONER FINDEN SIE IN UNSEREN SHOP
+Copyright @ 2013 Schneider-Multistore. Alle Rechte vorbehalten. 
+<br><br>
+HINWEIS: Alle genannten Markennamen und Bezeichnungen sind eingetragene Warenzeichen ihrer Eigentümer. 
+Die aufgeführten Markennamen und Warenzeichen auf unseren Internetseiten dienen ausschließlich zur Beschreibung unserer Produkte. 
+
+</p>
+</div>
+</div>
+
 <div id="company-services">
 <div class="services-container">
 <!-- 4 in a row but responsive -->
@@ -486,115 +539,6 @@ Kostenloser und schneller versand. Versand innerhalb von 24 Stunden
 <h3>Sichere Bezahlung</h3>
 <p>Sichere Zahlungsverfahren für sichere und reibungslose Transaktionen</p>
 </div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="horizontal-line"></div>
-
-<div id="more-products">
-<h3 class="section-title">More Products</h3>
-<div class="services-container">
-<!-- 4 in a row but responsive -->
-<div class="services-container-row">
-<div class="figure-container">
-<figure>
-<img
-src="https://www.schneiderprintware.de/thumbnail/9e/ef/9a/1708720406/canon-oce-yellow-label-wop611-105-mikron-hochweiss20vr19purxk1u_1280x1280.jpg"
-alt="Mountains"
-/>
-<figcaption>
-<a href="#"> Buy Now </a>
-</figcaption>
-<!-- something about the image -->
-</figure>
-<h5>Product Name</h5>
-</div>
-<div class="figure-container">
-<figure>
-<img
-src="https://www.schneiderprintware.de/thumbnail/00/af/d0/1708720522/415_2_1280x1280.png"
-alt="Mountains"
-/>
-<figcaption>
-<a href=""> Buy Now </a>
-</figcaption>
-</figure>
-<h5>Product Name</h5>
-</div>
-<div class="figure-container">
-<figure>
-<img
-src="https://www.schneiderprintware.de/thumbnail/dd/c2/f5/1708720407/tn-2000x2_1280x1280.jpg"
-alt="Mountains"
-/>
-<figcaption>
-<a href=""> Buy Now </a>
-</figcaption>
-</figure>
-<h5>Product Name</h5>
-</div>
-<div class="figure-container">
-<figure>
-<img
-src="https://www.schneiderprintware.de/thumbnail/80/84/12/1708720361/tk_580_1280x1280.jpg"
-alt="Mountains"
-/>
-<figcaption>
-<a href=""> Buy Now </a>
-</figcaption>
-</figure>
-<h5>Product Name</h5>
-</div>
-<div class="figure-container">
-<figure>
-<img
-src="https://www.schneiderprintware.de/thumbnail/9e/ef/9a/1708720406/canon-oce-yellow-label-wop611-105-mikron-hochweiss20vr19purxk1u_1280x1280.jpg"
-alt="Mountains"
-/>
-<figcaption>
-<a href=""> Buy Now </a>
-</figcaption>
-<!-- something about the image -->
-</figure>
-<h5>Product Name</h5>
-</div>
-<div class="figure-container">
-<figure>
-<img
-src="https://www.schneiderprintware.de/thumbnail/00/af/d0/1708720522/415_2_1280x1280.png"
-alt="Mountains"
-/>
-<figcaption>
-<a href=""> Buy Now </a>
-</figcaption>
-</figure>
-<h5>Product Name</h5>
-</div>
-<div class="figure-container">
-<figure>
-<img
-src="https://www.schneiderprintware.de/thumbnail/dd/c2/f5/1708720407/tn-2000x2_1280x1280.jpg"
-alt="Mountains"
-/>
-<figcaption>
-<a href=""> Buy Now </a>
-</figcaption>
-</figure>
-<h5>Product Name</h5>
-</div>
-<div class="figure-container">
-<figure>
-<img
-src="https://www.schneiderprintware.de/thumbnail/80/84/12/1708720361/tk_580_1280x1280.jpg"
-alt="Mountains"
-/>
-<figcaption>
-<a href=""> Buy Now </a>
-</figcaption>
-</figure>
-<h5>Product Name</h5>
 </div>
 </div>
 </div>
